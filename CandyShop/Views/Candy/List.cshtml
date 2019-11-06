@@ -1,0 +1,18 @@
+﻿@model CandyListViewModel
+
+
+<h1>@Model.CandyCategory</h1>
+
+@foreach (var candy in Model.Candies)
+{
+    <div class="card">
+        <img class="card-img-top" src="@candy.ImageThumbnailUrl" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">@candy.Name</h5><h5 class="float-right">@candy.Price.ToString("c")</h5>
+            <p class="card-text">@candy.Description</p>
+            <a href="#" class="btn btn-primary">Add To Cart</a>
+        </div>
+    </div>
+}
+
+
